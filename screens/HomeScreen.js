@@ -71,34 +71,39 @@ const HomeScreen = () => {
         </View>
       </View>
       {/**Body */}
-      <ScrollView
-         
-      >
-        {/**Categories */}
-        <Categories />
-      
-      {/**Featured row */}
 
-<View className="my-4 h-full">
-<FeaturedRow
-        id="1"
-        title="Featured"
-        description="Paid placements from our partners"
-      />
 
-      <FeaturedRow
-        id="2"
-        title="Tasty Discount"
-        description="Everyone is enjoying these juicy discount"
-      />
+<ScrollView
+        contentContainerStyle={{ paddingBottom: 100 }}
+        >
+          {/**Categories */}
+          <Categories />
+        
+        {/**Featured row */}
+  
+  <View className="my-4">
+  <FeaturedRow
+          id="1"
+          title="Featured"
+          description="Paid placements from our partners"
+        />
+  
+        <FeaturedRow
+          id="2"
+          title="Tasty Discount"
+          description="Everyone is enjoying these juicy discount"
+        />
+  
+        <FeaturedRow
+          id="3"
+          title="Offers near you"
+          description="Why not support your local resturant tonight"
+        />
+  </View>
+  </ScrollView>
 
-      <FeaturedRow
-        id="3"
-        title="Offers near you"
-        description="Why not support your local resturant tonight"
-      />
-</View>
-</ScrollView>
+
+
     </SafeAreaView>
   );
 };
