@@ -18,6 +18,12 @@ export default defineType({
   validation:(Rule)=>Rule.required(),
 },
 {
+  name:"genre",
+  type:"string",
+  title:"genre",
+  validation:(Rule)=>Rule.required(),
+},
+{
   name:"image",
   type:"image",
   title:"Image of the restaurant",

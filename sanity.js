@@ -1,13 +1,18 @@
+// import React from "react"
 import sanityClient from "@sanity/client"
-import { ImageUrlBuilder } from "@sanity/image-url/lib/types/builder"
+import  imageUrlBuilder  from "@sanity/image-url/"
+// import  imageUrlBuilder  from "@sanity/image-url/"
+
 
 const client = sanityClient({
-    projectId:"",
+    projectId:"94xjpge0",
     dataset:"production",
     useCdn:true,
-    apiVersion:""
+    apiVersion:"2021-10-21"
 })
-const builder  =ImageUrlBuilder(client)
-export const urlFor = (source) => builder.image(source)
-
+const builder  =imageUrlBuilder(client)
+// export const urlFor = (source) => builder.image(source)
+export function urlFor(source) {
+    return builder.image(source)
+  }
 export default client
