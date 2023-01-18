@@ -8,25 +8,18 @@ export default defineType({
     defineField(
       {
         name:"name",
-        type:"array",
+        type:"string",
         title:"Featured Category name",
         validation:(Rule)=>Rule.required(),
-        of:[
-      
-          {type:"reference", to:[{type:"restaurant"}]}
-        ],
- 
+
       }),
   defineField(
     {
       name:"short_description",
-      type:"array",
+      type:"string",
       title:"short description",
       validation:(Rule)=>Rule.required(),
-      of:[
-      
-        {type:"reference", to:[{type:"restaurant"}]}
-      ],
+
      
     }
   ),

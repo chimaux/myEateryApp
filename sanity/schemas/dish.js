@@ -8,12 +8,8 @@ export default defineType({
     defineField({
       title:"Dish",
       name:"dish",
-      type: "array",
-      validation:(Rule)=>Rule.required(),
-        of:[
-      
-          {type:"reference", to:[{type:"dish"}]}
-        ],
+      type: "string",
+     
     })
   ]
 }) 
