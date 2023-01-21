@@ -90,7 +90,7 @@ return(
   <DishRow
   key = {dish._id}
   id = {dish._id}
-  name = {dish.name}
+  name = {dish.dish}
   description = {dish.short_description}
   price = {dish.price}
   image = {dish.image}
