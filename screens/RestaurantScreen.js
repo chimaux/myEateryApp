@@ -1,10 +1,12 @@
 import { View, Text, Image, ScrollView, TouchableOpacity } from "react-native";
 import React, { useLayoutEffect } from "react";
 import { useNavigation, useRoute } from "@react-navigation/native";
-import { setStatusBarTranslucent } from "expo-status-bar";
-//import * as Icons from "react-native-heroicons/outline";
+
+import * as Icons from "react-native-heroicons/outline";
 import * as SolidIcons from "react-native-heroicons/solid";
 import { urlFor } from "../sanity";
+
+import DishRow from "../components/DishRow";
 
 const RestaurantScreen = () => {
   const {
@@ -60,6 +62,42 @@ const RestaurantScreen = () => {
           </View>
         </View>
         <Text className=" text-gray-400 pt-2">{short_description}</Text>
+      </View>
+      <TouchableOpacity
+        className="bg-white flex-row justify-between items-center py-2 border-y border-y-gray-300"
+      >
+    <View className="flex-row items-center">
+    <Icons.QuestionMarkCircleIcon
+        color="gray" opacity={0.6} size={20}
+      className="ml-4"
+        />
+        <Text className="font-bold pl-2 text-md">
+          Have a food allergy?
+        </Text>
+    </View>
+    <SolidIcons.ChevronRightIcon 
+    size={15}
+    color="#00ccbb"
+    className="mr-4"
+    />
+      </TouchableOpacity>
+      <View>
+        <Text className="px-4 pt-6 mb-3 font-bold text-xl">Menu</Text>
+      {/** Dishrows */}
+    {dishes.map(dish=>{
+
+return(
+  <DishRow
+  key = {dish._id}
+  id = {dish._id}
+  name = {dish.name}
+  description = {dish.short_description}
+  price = {dish.price}
+  image = {dish.image}
+  />
+)
+
+    })}
       </View>
     </ScrollView>
   );

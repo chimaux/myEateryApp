@@ -5,14 +5,38 @@ export default defineType({
   name: 'dish',
   type: 'document',
   fields: [
-    defineField({
+    {
       title:"Dish",
       name:"dish",
       type: "string",
+      validation:(Rule)=>Rule.required(),
      
-    })
+    },
+    {
+      title:"Description",
+      name:"short_description",
+      type: "string",
+      validation:(Rule)=>Rule.required(),
+     
+    },
+    {
+      title:"Price",
+      name:"price",
+      type: "string",
+      validation:(Rule)=>Rule.required(),
+     
+    },
+    {
+      title:"Image",
+      name:"image",
+      type: "image",
+      validation:(Rule)=>Rule.required(),
+     
+    }
   ]
 }) 
+
+
 
 
 
