@@ -11,7 +11,6 @@ export default defineType({
         type:"string",
         title:"Featured Category name",
         validation:(Rule)=>Rule.required(),
-
       }),
   defineField(
     {

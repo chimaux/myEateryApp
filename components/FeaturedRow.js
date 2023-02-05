@@ -63,7 +63,7 @@ return(
   short_description={restaurant.short_description}
   dishes={restaurant.dishes}
   long={restaurant.long}
-  lat={restaurant.lat}
+  // lat={restaurant.lat}
  />
 )
       })}
