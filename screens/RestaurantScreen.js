@@ -20,7 +20,7 @@ const RestaurantScreen = () => {
       short_description,
       dishes,
       long,
-      lat,
+      // lat,
     },
   } = useRoute();
   const navigation = useNavigation();
@@ -83,11 +83,16 @@ const RestaurantScreen = () => {
       </TouchableOpacity>
       <View>
         <Text className="px-4 pt-6 mb-3 font-bold text-xl">Menu</Text>
+       </View>
+       <View
+       className="bg-white"
+       >
       {/** Dishrows */}
     {dishes.map(dish=>{
 
 return(
   <DishRow
+ 
   key = {dish._id}
   id = {dish._id}
   name = {dish.dish}

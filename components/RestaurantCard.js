@@ -15,7 +15,7 @@ const RestaurantCard = ({
     short_description,
     dishes,
     long,
-    lat,
+    // lat,
 }) => {
   const navigation = useNavigation()
   return (
@@ -31,7 +31,7 @@ onPress={()=>{
     short_description,
     dishes,
     long,
-    lat,
+    // lat,
   })
 }
 
