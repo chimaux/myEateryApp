@@ -32,7 +32,7 @@ const RestaurantScreen = () => {
   }, []);
 
   return (
-    <ScrollView>
+    <ScrollView >
       <View className="relative">
         <Image
           source={{
@@ -92,7 +92,7 @@ const RestaurantScreen = () => {
 
 return(
   <DishRow
- 
+
   key = {dish._id}
   id = {dish._id}
   name = {dish.dish}

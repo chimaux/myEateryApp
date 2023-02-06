@@ -77,11 +77,11 @@ useEffect(()=>{
             <Icons.UserIcon size={25} color="#00ccbb" />
           </View>
           <View className="w-full flex-row items-center justify-center mt-3">
-            <View className="flex-row items-center bg-gray-200 flex-1 p-2 rounded">
+            <View className="flex-row items-center bg-gray-200 flex-1 p-2 rounded overflow-hidden">
               <Icons.MagnifyingGlassIcon size={25} color="#00ccbb" />
               <TextInput
                 placeholder="Enter location"
-                className="pl-2 text-xl"
+                className="pl-2 text-xl w-[90%]"
               />
             </View>
             <Icons.AdjustmentsVerticalIcon size={25} color="#00ccbb" />
